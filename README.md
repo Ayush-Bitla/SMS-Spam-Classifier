@@ -54,6 +54,13 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+4. Train the model:
+The model files are not included in the repository due to size constraints. When you run the application for the first time, it will automatically:
+- Load the SMS Spam Collection dataset
+- Preprocess the text data
+- Train the Naive Bayes classifier
+- Generate the necessary model files
+
 ## Usage
 
 1. Start the Streamlit app:
@@ -90,6 +97,14 @@ The project uses the SMS Spam Collection Dataset, which contains:
 - 5,574 SMS messages
 - Labeled as 'ham' (legitimate) or 'spam'
 - Used for training and evaluating the classifier
+
+## Model Files
+
+The following model files are generated when you run the application:
+- `vectorizer.pkl`: TF-IDF vectorizer for text preprocessing
+- `model.pkl`: Trained Naive Bayes classifier
+
+These files are automatically saved in the `script/` directory and are gitignored to keep the repository size manageable.
 
 ## Contributing
 
